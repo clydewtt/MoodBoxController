@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_blue_purple"
+    tools:context=".SplashScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading_lottie_animation"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            app:lottie_fileName="loading_blocks_lottie.json"
+            android:scaleY="2"
+            android:scaleX="2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:scaleType="fitXY"
+            app:lottie_speed="1"/>
+
+        <TextView
+            android:id="@+id/app_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mood Box Controller"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:fontFamily="@font/livvic_bold"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/credit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Made by: Clyde Tandjong"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/livvic_regular"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/splash_screen_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@drawable/background_gradient_blue_purple"/>
+
+</RelativeLayout>

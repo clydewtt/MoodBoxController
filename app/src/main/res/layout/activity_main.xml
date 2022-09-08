@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_blue_purple"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="64dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/bt_pair_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Bluetooth Pairing"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/livvic_bold"/>
+
+        <TextView
+            android:id="@+id/bt_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the MoodBox (HC-06)"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/livvic_regular"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="64dp">
+
+            <ListView
+                android:id="@+id/bluetooth_devices_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:dividerHeight="2dp"
+                android:visibility="visible"
+                android:background="@drawable/background_gradient_orangish"/>
+
+            <TextView
+                android:id="@+id/no_bluetooth_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_gradient_orangish"
+                android:text="This device does not support Bluetooth."
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:fontFamily="@font/livvic_bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refresh_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_refresh_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:maxImageSize="36dp"
+        android:layout_margin="16dp"/>
+
+    <View
+        android:id="@+id/gradient_overlay_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@drawable/background_gradient_blue_purple"/>
+</RelativeLayout>

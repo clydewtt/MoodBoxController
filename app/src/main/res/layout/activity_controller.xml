@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControllerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_gradient_blue_purple"
+        android:paddingTop="64dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_horizontal"
+        tools:ignore="HardcodedText">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connected."
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/livvic_bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You are now in control."
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/livvic_regular"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/current_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mood: Happy"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/livvic_semi_bold"/>
+
+        <TextView
+            android:id="@+id/current_pattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pattern: Linear"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/livvic_semi_bold"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/happy_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_columnWeight=".3"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Happy"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#29BA6E"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/alright_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_columnWeight=".3"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Alright"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#6E50E7"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sad_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_columnWeight=".3"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sad"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#FB902D"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mad_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_columnWeight=".3"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Mad"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#DC0000"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/whatever_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight=".6"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Whatever"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#48D1CC"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color Pattern"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/livvic_bold"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:useDefaultMargins="true"
+            android:columnCount="2"
+            android:rowCount="2">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/linear_pattern_card"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:layout_height="0dp"
+                android:layout_columnWeight=".5"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Linear"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#C98383"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/random_pattern_card"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:layout_height="0dp"
+                android:layout_columnWeight=".5"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Random"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#6AC579"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reverse_pattern_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:clickable="true"
+                android:layout_columnWeight=".5"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Reverse"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#43B4B8"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fade_pattern_card"
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:layout_height="0dp"
+                android:layout_columnWeight=".5"
+                android:layout_rowWeight=".5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Fade"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/livvic_bold"
+                    android:background="#000000"/>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/gradient_overlay_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient_blue_purple"
+        android:alpha="0"/>
+</RelativeLayout>
