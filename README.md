@@ -2,6 +2,8 @@
 The control app for my Mood Box project.
 See the project in action with the mood box here: https://youtu.be/30IM7d8HzZM
 
+See the code for the Arduino that powers the Mood Box here: https://github.com/clydewtt/MoodBoxArduino
+
 ## 💡 Inspiration
 I'm always looking to expand my skill set and knowledge, thus I decided to tackle hardware by building the Mood Box. 
 
